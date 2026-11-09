@@ -1,0 +1,43 @@
+<div class="container">
+    <div>
+        <h1>Bienvenido a Tecno App</h1>
+        <p>Aqui podras explorar nuestro catalogo de productos tecnologicos, navegar por el listado de productos y consultar informacion detallara de cada uno</p>
+
+        <button class="btn btn-primary" routerLink="/products">Ver productos</button>
+    </div>
+    
+    <hr>
+
+    <div>
+        <h2>Instructivo para incorporar Bootstrap al proyecto</h2>
+        <ol>
+            <li>
+                Acceder a la terminal y ejecutar <span>npm install bootstrap@5.3.8</span>
+            </li>
+            <li>
+                En la carpeta node_modules buscar la carpeta bootstrap, desplegar la carpeta dist y luego css
+            </li>
+            <li>
+                Dentro de css buscar el archivo <span>bootstrap.min.css</span>, clickear con el boton derecho y copiar ruta relativa
+            </li>
+            <li>
+                Buscar la clave <span>styles</span> dentro del <span>build</span> en el archivo <span>angular.json</span>, y agregar la ruta copiara (va entre ""), de ser necesario reemplazar las \ por /
+            </li>
+            <li>
+                <span>Para incorporar JS:</span> ir a la carpeta js dentro de dist y copiar la ruta relativa del archivo <span>bootstrap.bundle.min.js</span>
+            </li>
+            <li>
+                Crear la clave <span>scripts</span> dentro del <span>build</span> del <span>angular.json</span> (a continuacion de <span>styles</span>), y agregar la ruta copiada (igual que antes, va entre "", y reempazando \ por / de ser necesario)
+            </li>
+            <li>
+                Para utilizar los componentes de Bootstrap v5.3.8 ingresar en <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/" target="_blank">https://getbootstrap.com/docs/5.3/getting-started/introduction/</a>
+            </li>
+            <li>
+                Buscar la seccion componentes en el menu lateral izquierdo y seleccionar el que se va a utilizar
+            </li>
+            <li>
+                Copiar el codigo htm en la plantilla del componente
+            </li>
+        </ol>
+    </div>
+</div>

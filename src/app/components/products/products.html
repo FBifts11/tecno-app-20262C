@@ -1,0 +1,43 @@
+<div class="container">
+    <h2 class="mb-4">Productos disponibles</h2>
+
+    <a class="btn btn-success mb-4" routerLink="/products/create">Agregar Producto</a>
+    @if (productos().length === 0) {
+        <div class="alert alert-warning">
+            No hay productos disponibles
+        </div>
+    }@else {
+    <table class="table table-hover aling-middle">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Stock</th>
+                <th scope="col">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (producto of productos(); track producto.id) {
+                <tr>
+                    <td>{{producto.id}}</td>
+                    <td>{{producto.nombre}}</td>
+                    <td>${{producto.precio}}</td>
+                    <td>
+                        @if (producto.stock > 0) {
+                            {{producto.stock}}
+                        } @else {
+                            <span class="text-danger">Sin stock</span>
+                        }
+                    </td>
+                    <td>
+                        <a class="btn btn-primary btn-sm" [routerLink]="['/products', producto.id]">Ver detalles</a>
+                        <a class="btn btn-secondary btn-sm" [routerLink]="['/products', producto.id, 'update-put']">Actualizar con PUT</a>
+                        <a class="btn btn-secondary btn-sm" [routerLink]="['/products', producto.id, 'update-patch']">Actualizar con PATCH</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    }
+</div>
